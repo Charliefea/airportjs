@@ -1,7 +1,11 @@
-function Airport() {}
+function Airport() {
+  this.capacity = 10
+  this.planes = new Array
+}
 
 Airport.prototype.land = function(plane) {
   plane.land();
+  this.planes.push(plane);
   return 'Plane has landed';
 };
 

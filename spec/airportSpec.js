@@ -25,4 +25,13 @@ describe('Airport', function (){
   it ("it confirms that the plane has taken off" , function () {
     expect(airport.takeoff(plane)).toEqual('Plane has taken off');
   });
+
+  it ("It has a capicity on initialisation ", function () {
+    expect(airport.capacity).toEqual(10);
+  });
+
+  it ("Landed planes stored within array", function () {
+    airport.land(plane)
+    expect(airport.planes).toEqual([plane]);
+  });
 });
